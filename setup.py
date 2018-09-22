@@ -20,34 +20,24 @@ extras_require = {
         'tox>=2.9.1,<3.0.0',
         'wheel>=0.30.0,<1.0.0',
     ],
-    'py-evm': [
-        # Pin py-evm to exact version, until it leaves alpha.
-        # EVM is very high velocity and might change API at each alpha.
-        "py-evm==0.2.0a32",
-        "eth-hash[pysha3]>=0.1.4,<1.0.0;implementation_name=='cpython'",
-        "eth-hash[pycryptodome]>=0.1.4,<1.0.0;implementation_name=='pypy'",
-    ],
 }
 
 extras_require['dev'] = (
     extras_require['dev'] +
     extras_require['test'] +
-    extras_require['py-evm'] +
     extras_require['lint']
 )
-# convenience in case someone leaves out the `-`
-extras_require['pyevm'] = extras_require['py-evm']
 
 
 setup(
-    name='eth-tester',
+    name='moac-tester',
     # *IMPORTANT*: Don't manually change the version here. Use the 'bumpversion' utility.
-    version='0.1.0-beta.32',
-    description="""Tools for testing Ethereum applications.""",
+    version='0.1.0',
+    description="""Tools for testing Moac applications.""",
     long_description_markdown_filename='README.md',
-    author='Piper Merriam',
-    author_email='pipermerriam@gmail.com',
-    url='https://github.com/ethereum/eth-tester',
+    author='Zhenglong Cai',
+    author_email='caizl2002@hotmail.com',
+    url='https://github.com/wanpixiaozi/moac-tester',
     include_package_data=True,
     install_requires=[
         "toolz>0.8.2,<1;implementation_name=='pypy'",
@@ -60,10 +50,10 @@ setup(
     ],
     extras_require=extras_require,
     setup_requires=['setuptools-markdown'],
-    py_modules=['eth_tester'],
+    py_modules=['moac_tester'],
     license="MIT",
     zip_safe=False,
-    keywords='ethereum',
+    keywords='moac',
     packages=find_packages(exclude=["tests", "tests.*"]),
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
