@@ -2,7 +2,7 @@ import os
 import sys
 import warnings
 
-from eth_tester.utils.module_loading import (
+from moac_tester.utils.module_loading import (
     get_import_path,
     import_string,
 )

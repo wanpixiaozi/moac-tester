@@ -4,7 +4,7 @@ from eth_utils import (
     decode_hex,
 )
 
-from eth_tester.utils.accounts import (
+from moac_tester.utils.accounts import (
     private_key_to_address,
 )
 

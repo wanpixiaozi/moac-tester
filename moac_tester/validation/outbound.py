@@ -8,11 +8,11 @@ from eth_utils import (
     is_canonical_address,
 )
 
-from eth_tester.constants import (
+from moac_tester.constants import (
     UINT256_MAX,
     UINT2048_MAX,
 )
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     ValidationError,
 )
 

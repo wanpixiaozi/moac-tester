@@ -21,10 +21,10 @@ from eth_utils import (
     decode_hex,
 )
 
-from eth_tester.constants import (
+from moac_tester.constants import (
     BLOCK_NUMBER_META_VALUES,
 )
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     ValidationError,
 )
 

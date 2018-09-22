@@ -15,10 +15,10 @@ from eth_utils import (
     decode_hex,
 )
 
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     ValidationError,
 )
-from eth_tester.validation import DefaultValidator
+from moac_tester.validation import DefaultValidator
 
 
 @pytest.fixture

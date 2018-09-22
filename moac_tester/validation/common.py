@@ -19,11 +19,11 @@ from eth_utils import (
     to_tuple,
 )
 
-from eth_tester.constants import (
+from moac_tester.constants import (
     UINT256_MAX,
     UINT8_MAX,
 )
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     ValidationError,
 )
 

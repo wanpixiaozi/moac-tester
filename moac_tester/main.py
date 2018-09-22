@@ -28,10 +28,10 @@ from eth_utils import (
     to_int
 )
 
-from eth_tester.backends import (
+from moac_tester.backends import (
     get_chain_backend,
 )
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     AccountLocked,
     BlockNotFound,
     FilterNotFound,
@@ -39,21 +39,21 @@ from eth_tester.exceptions import (
     TransactionNotFound,
     ValidationError,
 )
-from eth_tester.normalization import (
+from moac_tester.normalization import (
     get_normalizer_backend,
 )
-from eth_tester.utils.accounts import (
+from moac_tester.utils.accounts import (
     private_key_to_address,
 )
-from eth_tester.utils.filters import (
+from moac_tester.utils.filters import (
     Filter,
     check_if_log_matches,
 )
-from eth_tester.utils.transactions import (
+from moac_tester.utils.transactions import (
     extract_valid_transaction_params,
     remove_matching_transaction_from_list,
 )
-from eth_tester.validation import (
+from moac_tester.validation import (
     get_validator,
 )
 

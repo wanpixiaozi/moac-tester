@@ -6,7 +6,7 @@ from eth_utils import (
     big_endian_to_int,
     is_list_like,
 )
-from eth_tester.utils.filters import (
+from moac_tester.utils.filters import (
     check_single_topic_match,
     check_if_from_block_match,
     check_if_to_block_match,

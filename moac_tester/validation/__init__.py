@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 import os
 
-from eth_tester.utils.module_loading import (
+from moac_tester.utils.module_loading import (
     get_import_path,
     import_string,
 )

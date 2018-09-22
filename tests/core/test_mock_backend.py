@@ -2,12 +2,12 @@ from __future__ import unicode_literals
 
 import pytest
 
-from eth_tester import (
+from moac_tester import (
     EthereumTester,
     MockBackend,
 )
 
-from eth_tester.utils.backend_testing import (
+from moac_tester.utils.backend_testing import (
     BaseTestBackendDirect,
 )
 

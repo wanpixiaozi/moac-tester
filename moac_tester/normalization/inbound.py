@@ -22,7 +22,7 @@ from .common import (
     normalize_if,
 )
 
-from eth_tester.validation.inbound import (
+from moac_tester.validation.inbound import (
     is_valid_topic_array,
 )
 

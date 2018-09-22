@@ -1,4 +1,4 @@
-from eth_tester.constants import (
+from moac_tester.constants import (
     SECPK1_P as P,
     SECPK1_N as N,
     SECPK1_A as A,

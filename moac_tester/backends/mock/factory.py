@@ -19,8 +19,8 @@ from eth_utils import (
     to_tuple,
 )
 
-from eth_tester.backends.common import merge_genesis_overrides
-from eth_tester.utils.accounts import (
+from moac_tester.backends.common import merge_genesis_overrides
+from moac_tester.utils.accounts import (
     generate_contract_address,
 )
 

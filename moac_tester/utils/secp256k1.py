@@ -7,7 +7,7 @@ from eth_utils import (
     is_bytes,
 )
 
-from eth_tester.constants import (
+from moac_tester.constants import (
     SECPK1_G,
     SECPK1_N,
 )

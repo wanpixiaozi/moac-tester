@@ -23,12 +23,12 @@ from eth_keys import (
     keys,
 )
 
-from eth_tester.constants import (
+from moac_tester.constants import (
     UINT256_MIN,
     UINT256_MAX,
     BURN_ADDRESS,
 )
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     AccountLocked,
     BlockNotFound,
     FilterNotFound,

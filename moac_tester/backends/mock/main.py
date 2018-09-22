@@ -20,18 +20,18 @@ from eth_utils import (
     is_integer,
 )
 
-from eth_tester.backends.base import (
+from moac_tester.backends.base import (
     BaseChainBackend,
 )
-from eth_tester.exceptions import (
+from moac_tester.exceptions import (
     BlockNotFound,
     TransactionNotFound,
 )
 
-from eth_tester.utils.accounts import (
+from moac_tester.utils.accounts import (
     private_key_to_address,
 )
-from eth_tester.utils.encoding import (
+from moac_tester.utils.encoding import (
     zpad,
 )
 
