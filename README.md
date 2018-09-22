@@ -1,9 +1,5 @@
 # Moac Tester
 
-[![Join the chat at https://gitter.im/Moac/eth-tester](https://badges.gitter.im/Moac/eth-tester.svg)](https://gitter.im/Moac/eth-tester)
-
-[![Build Status](https://travis-ci.org/Moac/eth-tester.png)](https://travis-ci.org/Moac/eth-tester)
-
 
 Tools for testing moac based applications.
 
@@ -35,7 +31,7 @@ pip install moac-tester
 1000000000000000000000000
 >>> t.send_transaction({'from': '0x82A978B3f5962A5b0957d9ee9eEf472EE55B42F1', 'to': '0x7d577a597B2742b498Cb5Cf0C26cDCD726d39E6e', 'gas': 21000, 'value': 1})
 '0x140c1da1370a908e4c0f7c6e33bb97182011707c6a9aff954bef1084c8a48b25'
->>> t.get_transaction_by_hash(0x140c1da1370a908e4c0f7c6e33bb97182011707c6a9aff954bef1084c8a48b25')
+>>> t.get_transaction_by_hash('0x140c1da1370a908e4c0f7c6e33bb97182011707c6a9aff954bef1084c8a48b25')
 {'block_hash': '0x89c03ecb6bbf3ff533b04a663fa98d59c9d985de806d1a9dcafaad7c993ee6e8',
  'block_number': 0,
  'data': '0x',
@@ -389,7 +385,7 @@ Raises [`BlockNotFound`](#errors-BlockNotFound) if a block for the given number
 cannot be found.
 
 ```python
->>> t.get_block_by_numbers(1)
+>>> t.get_block_by_number(1)
 {'difficulty': 131072,
  'extra_data': '0x0000000000000000000000000000000000000000000000000000000000000000',
  'gas_limit': 999023468,
@@ -696,13 +692,11 @@ various backends by default.  You can however install Moac tester with the
 necessary dependencies using the following method.
 
 ```bash
-$ pip install eth-tester[<backend-name>]
+$ pip install moac-tester[<backend-name>]
 ```
 
 You should replace `<backend-name>` with the name of the desired testing
-backend.  Available backends are:
-
-* `py-evm`: [PyEVM (alpha)](https://pypi.python.org/pypi/py-evm) **(experimental)**
+backend.  
 
 ### Selecting a Backend
 
@@ -722,9 +716,8 @@ backend class you wish to use.
 
 ### Available Backends
 
-Moac tester can be used with the following backends.
+Moac tester can be used with the following backend.
 
-* PyEVM (experimental)
 * MockBackend
 
 #### MockBackend
@@ -737,16 +730,6 @@ It mocks out all of the objects and interactions.
 >>> t = MoacTester(MockBackend())
 ```
 
-#### PyEVM (experimental)
-
-> **WARNING** Py-EVM is experimental and should not be relied on for mission critical testing at this stage.
-
-Uses the experimental Py-EVM library.
-
-```python
->>> from moac_tester import PyEVMBackend
->>> t = MoacTester(PyEVMBackend())
-```
 
 ### Implementing Custom Backends
 
