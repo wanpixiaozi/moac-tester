@@ -50,7 +50,7 @@ setup(
     ],
     extras_require=extras_require,
     setup_requires=['setuptools-markdown'],
-    py_modules=['moac_tester'],
+    # py_modules=['moac_tester'],
     license="MIT",
     zip_safe=False,
     keywords='moac',

@@ -139,7 +139,7 @@ Any `block_number` parameter will accept the following string values.
 * `'pending'`: for the current un-mined block.
 * `'earliest'`: for the genesis block.
 
-> Note: These **must** be text strings (not byte stringS)
+> Note: These **must** be text strings (not byte strings)
 
 
 ## `moac_tester.MoacTester`
