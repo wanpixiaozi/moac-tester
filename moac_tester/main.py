@@ -92,7 +92,7 @@ def handle_auto_mining(func):
     return func_wrapper
 
 
-class EthereumTester(object):
+class MoacTester(object):
     backend = None
 
     validator = None

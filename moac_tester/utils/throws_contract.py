@@ -109,21 +109,21 @@ THROWS_ABI = {
 }
 
 
-def _deploy_throws(eth_tester, contract_name):
-    deploy_hash = eth_tester.send_transaction({
-        "from": eth_tester.get_accounts()[0],
+def _deploy_throws(moac_tester, contract_name):
+    deploy_hash = moac_tester.send_transaction({
+        "from": moac_tester.get_accounts()[0],
         "gas": 500000,
         "data": THROWS_BYTECODE[contract_name],
     })
-    deploy_receipt = eth_tester.get_transaction_receipt(deploy_hash)
+    deploy_receipt = moac_tester.get_transaction_receipt(deploy_hash)
     throws_address = deploy_receipt['contract_address']
     assert throws_address
-    throws_code = eth_tester.get_code(throws_address)
+    throws_code = moac_tester.get_code(throws_address)
     assert len(throws_code) > 2
     return throws_address
 
 
-def _make_call_throws_transaction(eth_tester, contract_address, contract_name,
+def _make_call_throws_transaction(moac_tester, contract_address, contract_name,
                                   fn_name, fn_args=None):
     from eth_abi import encode_abi
 
@@ -138,7 +138,7 @@ def _make_call_throws_transaction(eth_tester, contract_address, contract_name,
     ]
     fn_selector = function_abi_to_4byte_selector(fn_abi)
     transaction = {
-        "from": eth_tester.get_accounts()[0],
+        "from": moac_tester.get_accounts()[0],
         "to": contract_address,
         "gas": 500000,
         "data": encode_hex(fn_selector + encode_abi(arg_types, fn_args)),
