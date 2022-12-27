@@ -1,5 +1,5 @@
 eth_keys==0.2.0b3
-setuptools==40.2.0
+setuptools==65.5.1
 eth_utils==1.2.1
 rlp==0.6.0
 pytest==3.7.1
